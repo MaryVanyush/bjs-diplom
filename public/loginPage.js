@@ -12,13 +12,9 @@ userForm.loginFormCallback = (date) => {
 
 userForm.registerFormCallback = (data) => {
     ApiConnector.register(data, response =>{
-        console.log(response);
         if(response.success === false){
             userForm.setRegisterErrorMessage(response.error);
         }
+        location.reload();
     })
 };
-
-
-// ApiConnector.logout(() => {})
-// login: oleg@demo.ru, password: demo
