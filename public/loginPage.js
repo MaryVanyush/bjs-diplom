@@ -5,8 +5,9 @@ userForm.loginFormCallback = (date) => {
     ApiConnector.login(date, response => {
         if(response.success === false){
             userForm.setLoginErrorMessage(response.error);
-        } 
-        location.reload();
+        } else{
+            location.reload();
+        }
 })
 };
 
